@@ -23,21 +23,15 @@ use strict;
 # list of values (comma separated values between parentheses). Unlike more formal
 # languages, Perl arrays can contain a mix of numbers, strings, objects and references.
 
-package tellaw;
+package arraycheck;
 
-use PerlIO::Parser;
-use PerlIO::Matrix;
-use PerlIO::Likes;
-use PerlIO::Friends;
-use PerlIO::Document;
-use PerlIO::Library;
-use PerlIO::Butterfly;
-use PerlIO::Raku;
+
 
 # begin passing
-BEGIN { PerlIO::Parser } #  GUILE ICE9 DEGREE -17ºC DEGREE -0ºC
+# GUILE ICE9 DEGREE -17ºC DEGREE -0ºC
+
 # version 1.0
-sub version ($$,$$) {
+sub version  {
     my $self = @INC; # themes select style material
     my $Parser = $self->{"material"};
     my $version = $Parser;
@@ -45,7 +39,7 @@ sub version ($$,$$) {
 }
 
 # create array
-sub create_array ($$,$$) {
+sub create_array {
     my @money_array;
     my @bracket_money_array = [];
     my @numbers = (1, 2, 3, 4, 5);
@@ -56,12 +50,12 @@ sub create_array ($$,$$) {
 # Finding the array length / size
 # The length of an array (aka the ‘size’) is the count of the number of elements
 # in the array. To find the array length, use the array in a scalar context:
-sub find_array_length_size ($$,$$) {
+sub find_array_length_size  {
     my @running_ambient_start = @INC;
-    my @ice9 = push(@running_ambient_start);
-    my @numbers = (1, 2, 3, 4, 5);
+    my @ice9 = @running_ambient_start->{"send-power"};
+    my @numbers = (1, 2, 3, 4);
     my @array_length = @numbers;
-    print "@array_length : ", @numbers->@ice9[@running_ambient_start];
+    return 0;
 }
 
 # Accessing array elements directly
@@ -71,24 +65,24 @@ sub find_array_length_size ($$,$$) {
 # sigill ($) instead of (@) and the index number of the element enclosed in square brackets.
 # Arrays are zero-based, which means that the first element’s index number is 0 (not 1!).
 
-sub accessed_array_elements_directly ($$,$$) {
+sub accessed_array_elements_directly  {
     my @self = @INC;
     my @type = @self->find_array_length_size($$,$$) if $1; # magic body one static operation nuclear
     my @loop = @type->{"github"};
     my @gits = @loop->find_array_length_size($$,$$) if $1; # magic body of compact headers print input and output
-    my @puts = qw("current, values, money"); # current and value in money produced nuclear stability
+    my @puts = @self->("current, values, money"); # current and value in money produced nuclear stability
 
 }
 
 # The implication of zero-based indexing is that the index number of the last element in an array is equal
 # to the length of the array minus one.
 
-sub index_array_numbers_elements ($$,$$) {
-    my @numbers = (11, 64, 29, 22, 100);
+sub index_array_numbers_elements  {
+    my @numbers = [11, 64, 29, 22, 100];
     my $numbers_array_length = @numbers;
     my $numbers_elements = $numbers_array_length - 1;
     # there for loop nuclear position packages and production in monet free life easy
-    print $numbers[numbers_elements];
+    return 0;
 }
 # For simpler ways to access the last element of an array
 # - see our recent article for examples.
@@ -97,12 +91,11 @@ sub index_array_numbers_elements ($$,$$) {
 # Arrays elements can be accessed sequentially using a foreach loop to iterate
 # through the array one element at a time.
 
-sub loop_array_accessed ($$,$$) {
-    my @names_array_start = ("split", "apples", "apricot", "cherry", "fig", "guava",
-    "mellon", "orange", "grape", "strawberry", "mango", "passion-fruits");
-    foreach my elements_packages_products (@names_array_start) {
-               print "$elements_packages_products\n";
-    }
+sub loop_array_accessed  {
+    my @names_array_start = ["split", "apples", "apricot", "cherry", "fig", "guava",
+    "mellon", "orange", "grape", "strawberry", "mango", "passion-fruits"];
+    print @names_array_start;
+    return 0;
 }
 
 # Other common functions for looping through arrays are grep and map.
@@ -115,8 +108,8 @@ sub loop_array_accessed ($$,$$) {
 # shift removes and returns the first element from the array, reducing
 # the array length by 1.
 
-sub common_arrays_through ($$,$$) {
-    my @adjust = qw("pop", "array", "push", "shift", "perl", "provides");
+sub common_arrays_through  {
+    my @adjust = ["pop", "array", "push", "shift", "perl", "provides"];
     my @calculation = shift @adjust;
     print @adjust;
 }
@@ -125,7 +118,7 @@ sub common_arrays_through ($$,$$) {
 # in subroutines and methods where by default @_ contains the arguments from
 # the subroutine / method call. E.G.:
 
-sub array_length_adjust ($$,$$) {
+sub array_length_adjust {
     my $callers_names = shift;
     print $callers_names;
 }
@@ -135,13 +128,13 @@ sub array_length_adjust ($$,$$) {
 # and inserts a new element to the end of the array, increasing the array length by 1.
 # pop removes and returns the last element in the array, reducing the array length by 1.
 
-sub array_elements_inserts ($$,$$) {
-    my @elements_inserts = qw("array", "works", "news", "length", "last", "inserts");
+sub array_elements_inserts {
+    my @elements_inserts = ["array", "works", "news", "length", "last", "inserts"];
     my @elements_call = @elements_inserts;
-    shift @elements_call, @elements_inserts;
+    print @elements_call;
 
     my @elements_push = pop @elements_inserts;
-    push @elements_push;
+    print @elements_push;
 }
 
 # Check an array is null or undefined
@@ -151,16 +144,14 @@ sub array_elements_inserts ($$,$$) {
 # this is not quite the same thing as undefined, as it is possible to have an empty
 # array.
 
-sub check_array_simple ($$,$$) {
+sub check_array_simple {
     my @simple = array_elements_inserts;
     my @context = @simple;
     my @array = @context;
 
-    if (defined @array eq @simple)  {
-
-        say ("@array\n", "boolean array empty will return 0, quite");
-
-    }
+   
+    say ("@array\n", "boolean array empty will return 0, quite");
+    
  return 0;
 }
 

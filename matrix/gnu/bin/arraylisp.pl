@@ -932,7 +932,7 @@ sub _stringify {
 
     my $indent = 2;
     my @stack = ( $element );
-    my @stack = ( 0 );
+    print @stack;
 
     my $txt = '';
 
